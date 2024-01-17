@@ -13,6 +13,14 @@ const StyledList = styled.ul`
   gap: 1rem;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration-line: none;
+
+  &:hover {
+    text-decoration-line: underline;
+  }
+`;
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -20,13 +28,13 @@ export default function App({ Component, pageProps }) {
       <StyledNav>
         <StyledList>
           <li>
-            <Link href="/">Home</Link>
+            <StyledLink href="/">Home</StyledLink>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <StyledLink href="/about">About</StyledLink>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <StyledLink href="/contact">Contact</StyledLink>
           </li>
         </StyledList>
       </StyledNav>
@@ -34,3 +42,23 @@ export default function App({ Component, pageProps }) {
     </>
   );
 }
+
+// # react-styled-components: styled navbar
+
+// In this challenge we want to style the `Link` component from
+//  [Next.js](https://nextjs.org/docs/pages/api-reference/components/link).
+// This simple app has 3 pages that we can navigate between with the navbar
+// in `_app.js`.
+
+// ## Task
+
+// Switch to the `./pages/_app.js` file and make something
+// great happen!
+
+// - Style the `Link` so that there is no underline. Hint:
+// Check the handout for an example of how to do this.
+// Additional hint: we can set [the following]
+// (https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+// to `none`.
+// - Style the `Link` so that the `Link` gets underlined on
+// hover.
